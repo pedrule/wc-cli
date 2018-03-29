@@ -1,0 +1,56 @@
+version: "3.3"
+
+services:
+  wc_start:
+    build:
+      context: .
+      dockerfile: Dockerfile_start
+    command: ./node_modules/.bin/webpack-dev-server --host 0.0.0.0 --hot
+    volumes:
+      - type: bind
+        source: ./src
+        target: /src
+      - type: volume
+        source: wc
+        target: /dist
+    ports:
+          - "1812:1812"
+
+  wc_build:
+      build:
+        context: .
+        dockerfile: Dockerfile_build
+      command: ./node_modules/.bin/webpack --watch --watch-poll=1000
+      volumes:
+        - type: bind
+          source: ./src
+          target: /src
+        - type: volume
+          source: wc
+          target: /dist
+        - type: bind
+          source: ./webpack.config.js
+          target: /webpack.config.js
+      ports:
+            - "1813:1813"
+
+  wc_test:
+    build:
+      context: .
+      dockerfile: Dockerfile_test
+    command: ./node_modules/.bin/polymer serve --port=1814 --hostname 0.0.0.0
+    volumes:
+      - type: bind
+        source: ./test
+        target: /test
+      - type: volume
+        source: wc
+        target: /dist
+    ports:
+          - "1814:1814"
+
+
+volumes:
+  wc:
+
+

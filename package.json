@@ -1,0 +1,22 @@
+{
+  "name": "rd-cli",
+  "version": "1.0.0",
+  "description": "this a cli application to easily initiate a Reanult-Digital project",
+  "main": "index.js",
+  "bin": {
+    "rd-wc create-wc": "./index.js"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.renault-digital.com/shared/rd-cli"
+  },
+  "author": "pierre Alibert",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.15.1",
+    "ncp": "^2.0.0"
+  }
+}
