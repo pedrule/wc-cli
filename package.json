@@ -4,7 +4,7 @@
   "description": "this a cli application to easily initiate a Renault-Digital project",
   "main": "index.js",
   "bin": {
-    "rd-wc create-wc": "./index.js"
+    "rd-wc": "./index.js"
   },
   "scripts": {
     "test": "test"
