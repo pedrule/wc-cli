@@ -1,7 +1,7 @@
 {
   "name": "rd-cli",
   "version": "1.0.0",
-  "description": "this a cli application to easily initiate a Reanult-Digital project",
+  "description": "this a cli application to easily initiate a Renault-Digital project",
   "main": "index.js",
   "bin": {
     "rd-wc create-wc": "./index.js"
