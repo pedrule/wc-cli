@@ -1,7 +1,7 @@
 {
   "name": "rd-cli",
   "version": "1.0.0",
-  "description": "this a cli application to easily initiate a Renault-Digital project",
+  "description": "this a cli application to easily initiate a project",
   "main": "index.js",
   "bin": {
     "rd-wc": "./index.js"
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://git.renault-digital.com/shared/rd-cli"
+    "url": ""
   },
   "author": "pierre Alibert",
   "license": "ISC",
